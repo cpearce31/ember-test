@@ -48,7 +48,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/ember-auth-template-master';
     ENV.locationType = 'hash';
-    ENV.apiHost = '<% replace with the URL to your deployed API %>';
+    ENV.apiHost = 'http://foobar.com';
   }
 
   return ENV;
