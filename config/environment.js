@@ -7,15 +7,12 @@ module.exports = function (environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      },
-      EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false,
-      },
+      }
     },
 
     APP: {
@@ -49,7 +46,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/ember-auth-template-master';
     ENV.locationType = 'hash';
+    ENV.apiHost = '<% replace with the URL to your deployed API %>';
   }
 
   return ENV;
